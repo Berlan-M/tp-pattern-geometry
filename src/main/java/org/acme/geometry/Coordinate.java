@@ -18,4 +18,11 @@ public class Coordinate {
 	public double getY() {
 		return y;
 	}
+	public boolean isEmpty() {
+		if (Double.isNaN(this.x) || Double.isNaN(this.y)) {
+			return true;
+		}
+		else 
+			return false;
+	}
 }

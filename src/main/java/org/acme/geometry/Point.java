@@ -21,5 +21,9 @@ public String getType() {
 	
 	return "Point";
 }
+@Override
+public boolean isEmpty() {
+	return this.coordinate.isEmpty();
+}
 
 }

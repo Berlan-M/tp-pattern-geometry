@@ -24,5 +24,14 @@ public class LineString implements  Geometry{
 		
 		return "LineString";
 	}
+	@Override
+	public boolean isEmpty() {
+		for (Point p : points) {
+			if (p.isEmpty()) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 }

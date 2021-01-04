@@ -9,7 +9,8 @@ public static final double EPSILON = 1.0e-15;
 	@Test
 	public void testDefaultConstructor(){
 		
-		Point c = new Point();
+		Point p = new Point();
+		Assert.assertEquals(true, p.isEmpty());
 
 	}
 	@Test

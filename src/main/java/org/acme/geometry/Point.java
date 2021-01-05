@@ -42,6 +42,10 @@ public Envelope getEnvelope() {
 	
 	return e;
 }
+@Override
+public void accept(GeometryVisitor visitor) {
+	visitor.visit(this);
+}
 
 
 

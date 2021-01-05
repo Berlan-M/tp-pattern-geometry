@@ -42,29 +42,29 @@ public class LineStringTest {
 	public void testTranslate(){
 		// TODO
 		List<Point> points = new ArrayList<Point>();
-		points.add(new Point(new Coordinate(3.0, 4.0)));
+		points.add(new Point(new Coordinate(4.0, 5.0)));
 		
 		LineString l = new LineString(points);
 		
-		l.translate(1.0, 1.0);
+		l.translate(2.0, 2.0);
 		
 		Assert.assertEquals(false, l.isEmpty());
-		Assert.assertEquals(4.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
-		Assert.assertEquals(5.0, l.getPointN(0).getCoordinate().getY(), EPSILON);
+		Assert.assertEquals(6.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(7.0, l.getPointN(0).getCoordinate().getY(), EPSILON);
 	}
 	@Test
 	public void testClone(){
 		// TODO
 		List<Point> points = new ArrayList<Point>();
-		points.add(new Point(new Coordinate(3.0, 4.0)));
+		points.add(new Point(new Coordinate(6.0, 5.0)));
 		
 		LineString l = new LineString(points);
 		Geometry copy = l.clone();
 		
 		copy.translate(1.0, 1.0);
 		
-		Assert.assertEquals(3.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
-		Assert.assertEquals(4.0, l.getPointN(0).getCoordinate().getY(), EPSILON);
+		Assert.assertEquals(7.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(7.0, l.getPointN(0).getCoordinate().getY(), EPSILON);
 	}
 	public void getEnvelope(){
 		// TODO

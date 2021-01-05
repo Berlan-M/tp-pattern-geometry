@@ -53,7 +53,7 @@ public static final double EPSILON = 1.0e-15;
 		Assert.assertEquals(4.0, e.getTop().getX(), EPSILON);
 		Assert.assertEquals(5.0, e.getTop().getY(), EPSILON);
 		Assert.assertEquals(2.0, e.getBotom().getX(), EPSILON);
-		Assert.assertEquals(3.0, e.getBotom().getY(), EPSILON);
+		Assert.assertEquals(3.0, e.getTop().getX(), EPSILON);
 		
 	}
 	

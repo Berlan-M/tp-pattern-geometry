@@ -11,7 +11,8 @@ public class CoordinateTest {
 	public void testDefaultConstructor(){
 		// TODO
 		Coordinate c = new Coordinate();
-		Assert.assertEquals(true, c.isEmpty());
+		Assert.assertTrue(c.isEmpty());
+		
 	}
 	@Test
 	public void testConstructor(){

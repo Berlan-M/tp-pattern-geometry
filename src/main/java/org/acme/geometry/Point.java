@@ -28,7 +28,7 @@ public boolean isEmpty() {
 @Override
 public void translate(double dx, double dy) {
 	this.coordinate  = new Coordinate(this.coordinate.getX() + dx, this.coordinate.getY() + dy );
-	
+	triggerChange();
 }
 @Override
 public Geometry clone() {
@@ -46,6 +46,8 @@ public Envelope getEnvelope() {
 public void accept(GeometryVisitor visitor) {
 	visitor.visit(this);
 }
+
+
 
 
 

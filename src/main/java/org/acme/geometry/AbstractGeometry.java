@@ -1,6 +1,10 @@
 package org.acme.geometry;
 
+import java.util.List;
+
 public abstract class AbstractGeometry implements Geometry{
+	
+	private List<GeometryListener> listerners;
 	
 	public String asText() {
 		
@@ -16,5 +20,15 @@ public abstract class AbstractGeometry implements Geometry{
 	}
 	
 	public abstract Geometry clone();
+	
+	public void addListener(GeometryListener listener) {
+		this.listerners.add(listener);
+	}
+	
+	protected void triggerChange() {
+		for (GeometryListener listener : listerners) {
+			listener.onChange(this);
+		}
+	}
 
 }

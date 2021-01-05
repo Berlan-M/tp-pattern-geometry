@@ -41,7 +41,7 @@ public class LineString implements  Geometry{
 	}
 	@Override
 	public Geometry clone() {
-		List<Point> pts = new ArrayList<Point>();
+		List<Point> pts = new ArrayList<Point>(getNumPoints());
 		
 		for (int i = 0; i < this.points.size(); i++) {
 			pts.add((Point) this.points.get(i).clone());

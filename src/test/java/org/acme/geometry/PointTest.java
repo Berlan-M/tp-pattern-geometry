@@ -39,11 +39,11 @@ public static final double EPSILON = 1.0e-15;
 	public void testClone(){
 		// TODO
 		Point p = new Point(new Coordinate(3.0, 4.0));
-		Geometry copy = p.clone();
+		Geometry copy =  p.clone();
 		copy.translate(1.0, 1.0);
 		
-		Assert.assertEquals(3.0, p.getCoordinate().getX(), EPSILON);
-		Assert.assertEquals(4.0, p.getCoordinate().getY(), EPSILON);
+		Assert.assertSame(p.getType(),copy.getType());
+		
 	}
 	
 	

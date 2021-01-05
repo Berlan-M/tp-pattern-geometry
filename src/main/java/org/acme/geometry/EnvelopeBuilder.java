@@ -8,6 +8,18 @@ public class EnvelopeBuilder {
 	//Coordonnees des extremites
 	private List<Coordinate> CoordExtremites = new ArrayList<Coordinate>();
 	
+	public EnvelopeBuilder() {
+		this.CoordExtremites = new ArrayList<Coordinate>();
+		
+	}
+	public EnvelopeBuilder(List<Coordinate> CoordExtremites) {
+		this.CoordExtremites = CoordExtremites;
+		
+	}
+	public List<Coordinate> getCoordExtremites(){
+		return this.CoordExtremites;
+	}
+	
 	public void insert (Coordinate coordinate) {
 		// Chaque coordonnees inseree est ajoutee a la liste des coordonnees des extremites
 		this.CoordExtremites.add(coordinate);

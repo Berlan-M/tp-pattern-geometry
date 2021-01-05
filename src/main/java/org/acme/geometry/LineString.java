@@ -1,6 +1,7 @@
 package org.acme.geometry;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LineString implements  Geometry{
@@ -49,5 +50,29 @@ public class LineString implements  Geometry{
 		
 		return new LineString(pts);
 	}
+	@Override
+	public Envelope getEnvelope() {
+		
+		// liste des abscisses
+		List<Double> x =  new ArrayList<Double>();
+		//liste des ordonnees
+		List<Double> y =  new ArrayList<Double>();
+				
+		for (Point p : this.points) {	
+				x.add(p.getCoordinate().getX());
+		}
+				
+		for (Point p : this.points) {	
+			y.add(p.getCoordinate().getY());
+		}
+		
+		Coordinate futurBotom = new Coordinate(Collections.min(x),Collections.min(y));
+		Coordinate futurtop = new Coordinate(Collections.max(x),Collections.max(y));
+		
+		Envelope e = new Envelope(futurBotom,futurtop); 
+		
+		return e;
+		
+		}
 	
 }

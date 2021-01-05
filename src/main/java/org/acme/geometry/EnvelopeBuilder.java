@@ -35,6 +35,7 @@ public class EnvelopeBuilder {
 		for (Coordinate c : this.CoordExtremites) {	
 			x.add(c.getX());
 		}
+		
 		for (Coordinate c : this.CoordExtremites) {
 					y.add(c.getY());
 		}

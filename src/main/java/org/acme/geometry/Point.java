@@ -35,6 +35,14 @@ public Geometry clone() {
 	return new Point (this.coordinate);
 }
 
+@Override
+public Envelope getEnvelope() {
+	
+	Envelope e = new Envelope(new Coordinate(this.coordinate.getX() - 1.0,this.coordinate.getY() - 1.0),new Coordinate(this.coordinate.getX() + 1.0,this.coordinate.getY() + 1.0));
+	
+	return e;
+}
+
 
 
 

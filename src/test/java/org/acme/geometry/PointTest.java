@@ -45,6 +45,17 @@ public static final double EPSILON = 1.0e-15;
 		Assert.assertSame(p.getType(),copy.getType());
 		
 	}
+	@Test
+	public void getEnvelope(){
+		// TODO
+		Point p = new Point(new Coordinate(3.0, 4.0));
+		Envelope e = p.getEnvelope();
+		Assert.assertEquals(4.0, e.getTop().getX(), EPSILON);
+		Assert.assertEquals(5.0, e.getTop().getY(), EPSILON);
+		Assert.assertEquals(2.0, e.getBotom().getX(), EPSILON);
+		Assert.assertEquals(3.0, e.getBotom().getY(), EPSILON);
+		
+	}
 	
 	
 	
